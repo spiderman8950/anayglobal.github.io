@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anay Global Pte. Ltd.</title>
+  <style>
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  background: #ffffff;
+  color: #0a1a33;
+}
+header {
+  width: 100%;
+  background: #0a1a33;
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+header .logo { display: flex; align-items: center; gap: 10px; font-size: 20px; font-weight: 700; }
+header nav a { margin-left: 20px; text-decoration: none; color: white; font-weight: 600; }
+.hero { position: relative; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 100px 20px; background: url("https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1350&q=80") center/cover no-repeat; color: white; max-width:100%; overflow:hidden; }
+.hero::before { content:""; position:absolute; inset:0; background:rgba(0,0,0,0.55); backdrop-filter:blur(2px);} 
+.hero * { position:relative; z-index:2;} 
+.hero h1 { font-size:36px; max-width:700px;} 
+.hero p { font-size:18px; max-width:700px; margin-top:10px;} 
+.hero button { margin-top:25px; padding:12px 28px; background:#0a1a33; color:white; border:none; border-radius:6px; font-size:16px; cursor:pointer;} 
+section { padding:70px 40px; max-width:1200px; margin:auto;} 
+h2 { font-size:28px; margin-bottom:20px;} 
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:30px;} 
+.card { background:white; border-radius:10px; padding:25px; box-shadow:0 4px 14px rgba(0,0,0,0.08); transition:transform .25s ease, box-shadow .25s ease;} 
+.card:hover { transform:translateY(-6px); box-shadow:0 8px 20px rgba(0,0,0,0.12);} 
+.card img{ width:100%; border-radius:10px; margin-bottom:15px;} 
+.contact-box { background:#f5f7fa; padding:40px; border-radius:10px;} 
+footer { background:#0a1a33; color:white; text-align:center; padding:25px; margin-top:50px;} 
+@media(max-width:700px){ header nav{display:none;} .hero{padding:80px 20px;} }
+html, body { overflow-x: hidden; }
+* { box-sizing: border-box; }
+.service-section { margin-top: 20px; }
+.service-section h4 { margin-bottom: 8px; font-size: 18px; color: #0a1a33; }
+.service-section ul { padding-left: 20px; margin: 0; }
+.service-section ul li { margin-bottom: 4px; font-size:14px; line-height:1.5; }
+.learn-more-btn{ margin-top:12px; background:#0a1a33; color:white; border:none; padding:8px 14px; border-radius:6px; cursor:pointer; }
+.hidden{ display:none; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='52' height='52' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%230a1a33'/><path d='M20 65 L40 30 L60 70 L80 35' stroke='%23ffffff' stroke-width='8' fill='none' stroke-linecap='round' stroke-linejoin='round'/><circle cx='50' cy='50' r='6' fill='%23ffffff'/></svg>" width="40" style="border-radius:6px;" />
+      Anay Global Pte. Ltd.
+    </div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#memberships">Memberships</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <h1>Your Strategic Partner for Financial Clarity, Compliance, and Growth</h1>
+    <p>At Anay Global, we empower businesses with strong financial foundations. From cashflow optimization to full SFRS compliance, our expertise ensures clarity, control, and confidence in your financial decisions.</p>
+    <button onclick="location.href='#contact'">Book a Consultation</button>
+  </section>
+
+  <section id="about">
+    <h2>Trusted CFO Advisors for Growing Businesses</h2>
+    <p>Anay Global Pte. Ltd. is a Singapore-based financial consulting firm that partners with businesses to manage their finance, compliance, and reporting functions with precision and confidence.</p>
+    <p>With over 15 years of experience across audit, financial planning, and compliance, Anay Global supports both local and multinational businesses in achieving:</p>
+    <ul>
+      <li>Financial transparency and efficiency</li>
+      <li>Seamless compliance with Singapore Financial Reporting Standards (SFRS)</li>
+      <li>Sustainable business growth through smart financial strategy</li>
+    </ul>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="grid" style="grid-template-columns: repeat(3, 1fr);">
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1579621970795-87facc2f976d?auto=format&fit=crop&w=900&q=80" />
+        <h3>CFO Services</h3>
+        <button class="learn-more-btn" onclick="toggleInfo('info1')">Learn More</button>
+        <div id="info1" class="hidden">
+          <div class="service-section">
+            <h4 onclick="toggleInfo('prep1')" style="cursor:pointer;">Preparation and Review of Financial Statements ▾</h4>
+            <ul id="prep1" class="hidden">
+              <li>Standalone and consolidated financial statements (SFRS)</li>
+              <li>Conversion from US GAAP to SFRS</li>
+            </ul>
+          </div>
+
+          <div class="service-section">
+            <h4 onclick="toggleInfo('audit1')" style="cursor:pointer; font-weight:700; color:#0a1a33;">Audit Coordination and Liaison ▾</h4>
+            <ul id="audit1" class="hidden">
+              <li>Audit planning and coordination</li>
+              <li>Preparation of schedules and supporting documents</li>
+              <li>Resolution of audit queries</li>
+              <li>Finalization and sign-off of statements</li>
+            </ul>
+          </div>
+
+          <div class="service-section">
+            <h4 onclick="toggleInfo('liq1')" style="cursor:pointer; font-weight:700; color:#0a1a33;">Liquidity and Cashflow Planning ▾</h4>
+            <ul id="liq1" class="hidden">
+              <li>Manage payments</li>
+              <li>Foreign exchange risk management</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=900&q=80" />
+        <h3>Regulatory Compliance</h3>
+        <button class="learn-more-btn" onclick="toggleInfo('info2')">Learn More</button>
+        <div id="info2" class="hidden">
+          <ul>
+            <li>Income tax filing</li>
+            <li>GST registration and filing</li>
+            <li>Transfer pricing documentation</li>
+            <li>Correspondence with IRAS</li>
+            <li>Company incorporation</li>
+            <li>Annual returns</li>
+            <li>Nominee secretary services</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80" />
+        <h3>Accounting Services</h3>
+        <button class="learn-more-btn" onclick="toggleInfo('info3')">Learn More</button>
+        <div id="info3" class="hidden">
+          <ul>
+            <li>Bookkeeping and management accounts</li>
+            <li>Bank and intercompany reconciliations</li>
+            <li>Preparation of consolidated accounts</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="memberships">
+    <h2>Memberships</h2>
+    <div class="grid">
+      <div class="card" style="text-align:center;"><h3>ISCA</h3><p>Institute of Singapore Chartered Accountants</p></div>
+      <div class="card" style="text-align:center;"><h3>ACCA (UK)</h3><p>Association of Chartered Certified Accountants</p></div>
+      <div class="card" style="text-align:center;"><h3>SCTP</h3><p>Singapore Chartered Tax Professionals</p></div>
+      <div class="card" style="text-align:center;"><h3>ICAI</h3><p>Institute of Chartered Accountants of India</p></div>
+      <div class="card" style="text-align:center;"><h3>ACRA</h3><p>Corporate Service Provider</p></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Let’s Build Financial Clarity Together</h2>
+    <div class="contact-box">
+      <p><strong>Phone:</strong> +65 9008 0915</p>
+      <p><strong>Email:</strong> md@anayglobal.com</p>
+      <p><strong>Location:</strong> Singapore</p>
+    </div>
+  </section>
+
+  <footer>© 2025 Anay Global Pte. Ltd. — Your partner in financial growth and compliance excellence.</footer>
+
+  <script>
+    function toggleInfo(id){
+      const box = document.getElementById(id);
+      box.classList.toggle('hidden');
+    }
+  </script>
+</body>
+</html>
